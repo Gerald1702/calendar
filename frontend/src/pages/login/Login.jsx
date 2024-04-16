@@ -12,10 +12,15 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import MenuIcon from '@mui/icons-material/Menu';
+import AppBar from '@mui/material/AppBar';
+import Toolbar from '@mui/material/Toolbar';
+import IconButton from '@mui/material/IconButton';
+
 
 function Copyright(props) {
   return (
-    <Typography variant="body2" color="text.secondary" align="center" {...props}>
+    <Typography variant="body2" color="danger" align="center" {...props}>
       {}
       {'.'}
     </Typography>
@@ -37,9 +42,29 @@ export default function SignIn() {
   };
 
   return (
+    
     <ThemeProvider theme={defaultTheme}>
       <Container component="main" maxWidth="xs">
         <CssBaseline />
+        <Box sx={{ flexGrow: 1 }}>
+      <AppBar position="static" sx={{bgcolor:"#CA1F3D"}}>
+        <Toolbar>
+          <IconButton
+            size="large"
+            edge="start"
+            color="inherit"
+            aria-label="menu"
+            sx={{ mr: 2 }}
+          >
+            <MenuIcon />
+          </IconButton>
+          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+            HOVO
+          </Typography>
+          {/* <Button color="inherit">Login</Button> */}
+        </Toolbar>
+      </AppBar>
+    </Box>
         <Box
           sx={{
             marginTop: 8,
@@ -79,6 +104,7 @@ export default function SignIn() {
               id="password"
               autoComplete="current-password"
             />
+            
             <FormControlLabel
               control={<Checkbox value="remember" color="primary" />}
               label="Remember me"
@@ -87,7 +113,8 @@ export default function SignIn() {
               type="submit"
               fullWidth
               variant="contained"
-              sx={{ mt: 3, mb: 2,  }}
+              sx={{ mt: 3, mb: 2, bgcolor:"#0D0D0D"}}
+              // sx={{bgcolor:"black"}}
             >
               Login
             </Button>
