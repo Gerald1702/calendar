@@ -12,10 +12,7 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import MenuIcon from '@mui/icons-material/Menu';
-import AppBar from '@mui/material/AppBar';
-import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
+import ButtonAppBar from '../../components/navbar/Navbar';
 
 
 function Copyright(props) {
@@ -42,29 +39,13 @@ export default function SignIn() {
   };
 
   return (
-    
+    <div>
+      <ButtonAppBar/>
     <ThemeProvider theme={defaultTheme}>
+
       <Container component="main" maxWidth="xs">
         <CssBaseline />
-        <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static" sx={{bgcolor:"#CA1F3D"}}>
-        <Toolbar>
-          <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="menu"
-            sx={{ mr: 2 }}
-          >
-            <MenuIcon />
-          </IconButton>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            HOVO
-          </Typography>
-          {/* <Button color="inherit">Login</Button> */}
-        </Toolbar>
-      </AppBar>
-    </Box>
+       
         <Box
           sx={{
             marginTop: 8,
@@ -125,9 +106,9 @@ export default function SignIn() {
                 </Link>
               </Grid>
               <Grid item>
-                {/* <Link href="#" variant="body2">
+                <Link href="#" variant="body2">
                   {"Don't have an account? Sign Up"}
-                </Link> */}
+                </Link>
               </Grid>
             </Grid>
           </Box>
@@ -135,5 +116,6 @@ export default function SignIn() {
         <Copyright sx={{ mt: 8, mb: 4 }} />
       </Container>
     </ThemeProvider>
+    </div>
   );
 }
