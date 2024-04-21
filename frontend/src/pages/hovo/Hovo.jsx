@@ -56,7 +56,7 @@ function Hovo() {
 
   return (
     <div className="Hovo">
-      {/* <h1>Calendar</h1> */}
+     
       <Box sx={{ flexGrow: 1 }}>
         <AppBar position="static" sx={{ bgcolor: "#CA1F3D" }}>
           <Toolbar>
@@ -84,11 +84,7 @@ function Hovo() {
           value={newEvent.title}
           onChange={(e) => setNewEvent({ ...newEvent, title: e.target.value })}
         />
-        {/* <DatePicker placeholderText="Start Date" style={{marginRight:"10px", }}
-                selected={newEvent.start} onChange={(start) => setNewEvent({...newEvent, start})}/>
-                <DatePicker placeholderText="End Date" 
-                selected={newEvent.end} onChange={(end) => setNewEvent({...newEvent, end})}/>
-                <button style={{marginTop:"10px"}} onClick={handleAddEvent}>Add Event</button> */}
+        
         <DatePicker
           placeholderText="Start Date"
           style={{ marginRight: "10px", color: "#CA1F3D" }}
@@ -131,10 +127,4 @@ function Hovo() {
 
 export default Hovo;
 
-// const Hovo = () => {
-//   return (
-//     <div>New calemdar goes here</div>
-//   )
-// }
 
-// export default Hovo
