@@ -12,7 +12,8 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles'
-import ButtonAppBar from '../../components/navbar/Navbar.jsx';
+// import ButtonAppBar from '../../components/navbar/Navbar.jsx';
+import styles from "./index.module.css"
 
 
 function Copyright(props) {
@@ -41,7 +42,11 @@ export default function SignIn() {
 
   return (
     <div>
-      <ButtonAppBar/>
+      <nav className={styles.nav}> 
+    <a href='/calendar' className={styles.hovo}>Hovo</a> 
+    <a className={styles.hovo} href='/login'>Login</a> 
+  </nav>
+      {/* <ButtonAppBar/> */}
     <ThemeProvider theme={defaultTheme}>
       <Container component="main" maxWidth="xs">
         <CssBaseline />

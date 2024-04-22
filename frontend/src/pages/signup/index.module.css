@@ -1,0 +1,18 @@
+.nav { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    background-color: #CA1F3D; 
+    color: white;
+    height: 65px; 
+    padding: 10px 20px; 
+  }
+
+  .hovo{ 
+    font-size: 20px; 
+    margin: 0; 
+    color: white;
+    text-decoration: none;
+  }
+
+  
