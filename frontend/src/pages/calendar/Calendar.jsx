@@ -6,6 +6,8 @@ import { Dialog } from "@mui/material";
 import AddEvent from "../../components/add-event/addevent";
 import ButtonAppBar from "../../components/navbar/Navbar";
 
+
+
 const localizer = momentLocalizer(moment);
 
 const MyCalendar = ({ events }) => {

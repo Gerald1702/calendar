@@ -1,0 +1,13 @@
+.add{
+    text-justify:center ;
+    color: rgb(14, 13, 13);
+    font-size: larger;
+    font-weight: bold;
+}
+
+.event{
+    text-align: center;
+    color: black;
+    margin-left: 90%;
+    margin-top: 10%;
+}

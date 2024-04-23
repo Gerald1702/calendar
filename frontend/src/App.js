@@ -1,8 +1,8 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Signup from "./pages/signup/Signup";
 import Login from "./pages/login/Login";
-import Calendar from "./pages/calendar/Calendar";
 import AddEvent from "./components/add-event/addevent";
+import MyCalendar from "./pages/calendar/Calendar";
 
 
 
@@ -13,10 +13,10 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Signup />} />
 
-        <Route path="Signup" element={<Signup />} />
-        <Route path="Login" element={<Login />} />
-        <Route path="Calender" element={<Calendar />} />
-        <Route path="Addevent" element={<AddEvent />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/calendar" element={<MyCalendar />} />
+        <Route path="/addevent" element={<AddEvent />} />
        
       
       </Routes>
