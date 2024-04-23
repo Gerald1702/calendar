@@ -62,7 +62,7 @@ const displayUserProfile = (req, res) => {
 	try {
 		res.status(200).json({
 			status: "success",
-			message: "your profile was successfully retrieved",
+			message: "your profile was successfully retrieved",	
 			data: req.user,
 		});
 	} catch (error) {

@@ -2,7 +2,7 @@ import express from 'express'
 import cors from "cors"; 
 import dotenv  from 'dotenv'; 
 import mongoose from "mongoose"; 
-import {User}  from './routes/user.routes.js'; 
+import UserRoutes  from './routes/user.routes.js'; 
 import EventRoutes from './routes/event.routes.js' 
  
 // load env variables 
@@ -15,7 +15,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cors()); 
  
 //  load routes 
-// app.use('/api/users', User) 
+app.use('/api/users', UserRoutes) 
 app.use('/api/events', EventRoutes); 
  
 // Make database  connection 
