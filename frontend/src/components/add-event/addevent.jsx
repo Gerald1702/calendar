@@ -13,7 +13,7 @@ import dayjs from "dayjs";
 import Button from "@mui/material/Button";
 import "./index.css";
 
-export default function AddEvent({ startDate, endDate }) {
+export default function AddEvent({ startDate, endDate, setOpen }) {
   const addEvent = async (event) => {
     event.preventDefault();
     // Get form data
@@ -25,7 +25,7 @@ export default function AddEvent({ startDate, endDate }) {
       startDate: formData.get("startDate"),
       endDate: formData.get("endDate"),
     };
-    console.log(data);
+    // console.log(data);
     // Post data to API
     const response = await fetch(
       `${process.env.REACT_APP_API_URL}/api/events`,
@@ -38,7 +38,9 @@ export default function AddEvent({ startDate, endDate }) {
         },
       }
     );
-    console.log(response);
+    if (response.status === 201) {
+      setOpen(false);
+    }
   };
 
   return (

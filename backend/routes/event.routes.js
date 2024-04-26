@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { createNewEvent, deleteEvent, updateEvent } from "../controllers/event.controllers.js";
+import { createNewEvent, deleteEvent, getEvents, updateEvent } from "../controllers/event.controllers.js";
 
 
 //create user routes
@@ -7,7 +7,7 @@ const router = Router();
 
 router.post("/", createNewEvent)
 
-// router.get("/", getEvents)
+router.get("/", getEvents)
 
 router.patch('/:id',updateEvent)
 
